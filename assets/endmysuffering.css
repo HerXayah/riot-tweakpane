@@ -1,0 +1,228 @@
+.tweakpane-container {
+   position: absolute;
+   z-index: 9;
+}
+
+.tweakpane-container-content {
+   cursor: move;
+   z-index: 10;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+:root {
+   --font-display: 'Nunito Sans', sans-serif !important;
+   --font-body: 'Nunito Sans', sans-serif !important;
+}
+
+:root {
+   --tp-base-background-color: hsl(0deg 0% 23% / 94%);
+   --tp-base-shadow-color: hsla(0, 0%, 0%, 0.2);
+   --tp-button-background-color: hsla(0, 0%, 80%, 1);
+   --tp-button-background-color-active: hsla(0, 0%, 100%, 1);
+   --tp-button-background-color-focus: hsla(0, 0%, 95%, 1);
+   --tp-button-background-color-hover: hsla(0, 0%, 85%, 1);
+   --tp-button-foreground-color: hsla(0, 0%, 0%, 0.8);
+   --tp-container-background-color: hsla(0, 0%, 0%, 0.3);
+   --tp-container-background-color-active: hsla(0, 0%, 0%, 0.6);
+   --tp-container-background-color-focus: hsla(0, 0%, 0%, 0.5);
+   --tp-container-background-color-hover: hsla(0, 0%, 0%, 0.4);
+   --tp-container-foreground-color: hsla(0, 0%, 100%);
+   --tp-groove-foreground-color: hsla(0, 0%, 0%, 0.2);
+   --tp-input-background-color: hsla(0, 0%, 0%, 0.3);
+   --tp-input-background-color-active: hsla(0, 0%, 0%, 0.6);
+   --tp-input-background-color-focus: hsla(0, 0%, 0%, 0.5);
+   --tp-input-background-color-hover: hsla(0, 0%, 0%, 0.4);
+   --tp-input-foreground-color: hsla(0, 0%, 100%);
+   --tp-label-foreground-color: hsla(0, 3%, 76%);
+   --tp-monitor-background-color: hsla(0, 0%, 0%, 0.3);
+   --tp-monitor-foreground-color: hsla(0, 0%, 100%, 0.3);
+}
+
+/* 
+
+.clash-root-background-landing,
+.hold-leave,
+.collections-application,
+.clash-root-background-landing,
+.__rcp-fe-lol-store,
+.loot-backdrop.background-static,
+.personalized-offers-root,
+.parties-view,
+.yourshop-root,
+.clash-root-background,
+.clash-root-background-landing,
+.store-backdrop,
+.challenges-collection-component > .background,
+.loot-backdrop .lol-uikit-video-content,
+.rcp-fe-lol-event-shop-application,
+.champ-select-bg-darken,
+.rcp-fe-lol-game-in-progress,
+.postgame-background-image,
+.clash-root-background-landing,
+.clash-aram-intro-modal,
+.clash-root-background,
+.postgame-champion-background-wrapper,
+.stats-backdrop,
+.rcp-fe-viewport-sidebar,
+.loot-loading-screen,
+.lol-social-sidebar,
+.cdp-backdrop.progression:after,
+.cdp-backdrop-component,
+.cdp-backdrop:after,
+.clash-logo-border,
+.group-header,
+.ember-text-field,
+.parties-background-mask,
+.lol-loading-screen-container.lol-loading-screen-default-state,
+.match-details-root,
+#ember6936,
+.champion-splash-background,
+#ember7563,
+.loading-tab::after,
+.loot-milestones-tracker-wrapper,
+.rcp-fe-lol-tft-application-background,
+.tft-home-footer-bg,
+.tft-hub-footer-bg,
+.event-shop-index,
+.event-shop-page-header,
+.event-shop-progression,
+.event-shop-progression-info,
+.event-shop-reward-track-wrapper,
+.event-shop-token-shop-header {
+   background-color: transparent !important;
+   background: transparent !important;
+   backdrop-filter: none !important;
+   filter: none !important;
+}
+
+ body {
+   background-color: rgba(255, 255, 255, 0.4) !important;
+   background: rgba(255, 255, 255, 0.1) !important;
+} 
+
+body,
+html {
+   background-color: transparent !important;
+   background: transparent !important;
+   backdrop-filter: none !important;
+   filter: none !important;
+}
+
+.champion-thumbnail,
+.champion-image-container,
+.champion-mastery-info {
+   border-radius: 2rem 0rem 2rem !important;
+   border: none !important;
+}
+
+.champion-mastery-info {
+   top: 10.4rem !important;
+}
+
+.cdp-progression-header {
+   border: none !important;
+}
+
+.cdp-backdrop-img {
+   opacity: 0.4 !important;
+}
+
+.group-separator {
+   display: none !important;
+   border: none !important;
+}
+
+.ember-text-field {
+   padding-left: 5px !important;
+}
+
+.navigation-root-component {
+   border-bottom: none !important;
+}
+
+.lol-uikit-background-switcher-image,
+.timer-status::before {
+   display: none !important;
+}
+
+.lol-loading-screen-container .lol-loading-screen-lol-icon {
+   background: url('https://thicc-thighs.de/stuff/League/logo.png');
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+.lol-loading-screen-container.lol-loading-screen-default-state
+   .lol-loading-screen-spinner {
+   display: none;
+}
+
+.lol-loading-screen-status-text {
+   text-indent: -9999px;
+}
+
+.lol-loading-screen-status-text::after {
+   content: 'Chopping some wood...';
+   display: block;
+   text-indent: 0;
+}
+
+.lol-loading-screen-container.lol-loading-screen-default-state
+   .lol-loading-screen-progress-bar-container {
+   width: 1000px;
+}
+
+.lol-loading-screen-container.lol-loading-screen-default-state
+   .lol-loading-screen-progress-bar-progress {
+   background-image: linear-gradient(
+      to right,
+      #f1ede4 10%,
+      #1815f0 70%,
+      #db0824 125%
+   );
+}
+
+.lol-social-identity .lower-details lol-social-availability-hitbox {
+   margin: 3px 5px 0 1.5px !important;
+}
+
+div[data-screen-name='rcp-fe-lol-navigation-screen'] {
+   border-top: none !important;
+}
+
+.lobby-header-overlay,
+.loading-content,
+.bottom-gradient,
+.event-shop-page-header-vertical-divider {
+   display: none !important;
+}
+
+.navbar-blur {
+   background: transparent !important;
+}
+
+#rcp-fe-viewport-root {
+   border: none !important;
+}
+
+.event-shop-index-header,
+.event-shop-progression {
+   box-shadow: none !important;
+}
+
+.event-shop-token-shop-header,
+.event-shop-page-header,
+.event-shop-progression-info {
+   box-shadow: none !important;
+   border: none !important;
+}
+
+.event-shop-category-nav-bar,
+.event-shop-offer-card,
+.event-shop-reward-track-wrapper {
+   border: none !important;
+   background: none !important;
+}
+*/
+
+/* You can remove this. This is just for making it transparent. */
