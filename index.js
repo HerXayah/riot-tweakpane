@@ -21,12 +21,10 @@ window.addEventListener('load', async () => {
    // TODO: Itll sometimes show undefined
    // Find out why
 
-   let username = await utils.getUsername();
-
-   while (username == undefined) {
+   while (!(await utils.getUsername())) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
    }
-   Tweakpane.getTweakPaneReady(username);
+   Tweakpane.getTweakPaneReady(await utils.getUsername());
 });
 
 // needs fixing. I want it to be able to
