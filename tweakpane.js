@@ -1,4 +1,5 @@
 import Tweakpane from 'https://esm.sh/tweakpane@3.1.6';
+import * as utils from './utils.js';
 
 export let values = {
    windowtitle: 'Hello v1.0.0',
@@ -9,7 +10,7 @@ export let values = {
    alpha: 0,
 };
 
-export async function getTweakPaneReady(username) {
+export function getTweakPaneReady(username) {
    const pane = new Tweakpane.Pane({
       container: document.getElementsByClassName('tweakpane-container')[0],
       title: `Hello 💖 ${username} 💖`,

@@ -39,8 +39,6 @@
    --tp-monitor-foreground-color: hsla(0, 0%, 100%, 0.3);
 }
 
-/* 
-
 .clash-root-background-landing,
 .hold-leave,
 .collections-application,
@@ -223,6 +221,5 @@ div[data-screen-name='rcp-fe-lol-navigation-screen'] {
    border: none !important;
    background: none !important;
 }
-*/
 
 /* You can remove this. This is just for making it transparent. */

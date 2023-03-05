@@ -12,13 +12,21 @@ window.addEventListener('load', async () => {
    div.classList.add('tweakpane-container-wrapper');
    element.classList.add('tweakpane-container');
    element.style.width = '300px';
+   element.style.top = '20px';
+   element.style.left = '20px';
    div.appendChild(element);
    document.body.appendChild(div);
    utils.makeDraggable(element);
-   await utils.getUsername().then((username) => {
-      Tweakpane.getTweakPaneReady(username);
-      console.log('username: ' + username);
-   });
+
+   // TODO: Itll sometimes show undefined
+   // Find out why
+
+   let username = await utils.getUsername();
+
+   while (username == undefined) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+   }
+   Tweakpane.getTweakPaneReady(username);
 });
 
 // needs fixing. I want it to be able to
