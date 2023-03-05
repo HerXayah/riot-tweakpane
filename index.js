@@ -2,8 +2,6 @@ import './assets/endmysuffering.css';
 import * as utils from './utils.js';
 import * as Tweakpane from './tweakpane.js';
 
-let username = await utils.getUsername();
-
 window.addEventListener('load', async () => {
    console.log('Hello, world!');
 
@@ -16,8 +14,10 @@ window.addEventListener('load', async () => {
    element.style.width = '300px';
    div.appendChild(element);
    document.body.appendChild(div);
-   await utils.makeDraggable(element).then(() => {
+   utils.makeDraggable(element);
+   await utils.getUsername().then((username) => {
       Tweakpane.getTweakPaneReady(username);
+      console.log('username: ' + username);
    });
 });
 
