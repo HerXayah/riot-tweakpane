@@ -21,6 +21,8 @@ window.addEventListener('load', async () => {
    // TODO: Itll sometimes show undefined
    // Find out why
 
+   // Extra: Should now work? Need to investigate
+
    while (!(await utils.getUsername())) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
    }

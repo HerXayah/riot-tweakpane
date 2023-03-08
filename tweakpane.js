@@ -2,8 +2,7 @@ import Tweakpane from 'https://esm.sh/tweakpane@3.1.6';
 import * as utils from './utils.js';
 
 export let values = {
-   windowtitle: 'Hello v1.0.0',
-   bools: true,
+   Transparency: true,
    red: 0,
    green: 0,
    blue: 0,
@@ -15,39 +14,42 @@ export function getTweakPaneReady(username) {
       container: document.getElementsByClassName('tweakpane-container')[0],
       title: `Hello 💖 ${username} 💖`,
    });
-   pane.addInput(values, 'bools');
-   pane.addInput(values, 'windowtitle');
+   pane.addInput(values, 'Transparency');
    pane.addInput(values, 'red', {
       min: 0,
       max: 9,
       value: 0,
       step: 1,
+      label: 'Red',
    });
    pane.addInput(values, 'green', {
       min: 0,
       max: 9,
       value: 0,
       step: 1,
+      label: 'Green',
    });
    pane.addInput(values, 'blue', {
       min: 0,
       max: 9,
       value: 0,
       step: 1,
+      label: 'Blue',
    });
    pane.addInput(values, 'alpha', {
       min: 0,
       max: 9,
       value: 9,
       step: 1,
+      label: 'Opacity',
    });
    const btn = pane.addButton({
-      title: 'Click me',
-      label: 'transparency',
+      title: 'Save Changes!',
+      label: 'Transparency',
    });
    btn.on('click', () => {
       utils.transparency(
-         values.bools,
+         values.Transparency,
          values.red,
          values.green,
          values.blue,
