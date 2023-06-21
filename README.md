@@ -4,7 +4,7 @@ tweakpane integration into league of legends client
 
 ## Documentation
 
-Tweakpane Doc can be found [here](https://cocopon.github.io/tweakpane/)
+Tweakpane Doc can be found [here](https://tweakpane.github.io/docs/)
 
 <center>
 <div align="center">
