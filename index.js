@@ -24,10 +24,12 @@ window.addEventListener('load', async () => {
    
    // Extra: Should now work? Need to investigate
    
-   while (!(await utils.getUsername())) {
+   /*while (!(await utils.getUsername())) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
-   }
-   Tweakpane.getTweakPaneReady(await utils.getUsername());
+   }*/
+   setTimeout(Tweakpane.getTweakPaneReady(await utils.getUsername()), 5000);
+   //Tweakpane.getTweakPaneReady(await utils.getUsername());
+   
 });
 
 // needs fixing. I want it to be able to
