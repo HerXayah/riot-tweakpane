@@ -36,9 +36,9 @@ window.addEventListener('load', async () => {
 
 // also a bug is when you drag it out ill not react. just p[ress a boolean
 // and it will react again
-let element = document.getElementsByClassName('tweakpane-container')[0];
+const element = document.getElementsByClassName('tweakpane-container')[0];
 
-element.ondragend = function (e) {
+element.ondragend = function () {
    utils.checkOutOfBounds('tweakpane-container');
 };
 
