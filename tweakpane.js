@@ -1,4 +1,4 @@
-import Tweakpane from 'https://esm.sh/tweakpane@3.1.6';
+import {Pane} from 'https://cdn.jsdelivr.net/npm/tweakpane@4.0.0-beta.1/dist/tweakpane.min.js';
 import * as utils from './utils.js';
 
 export let values = {
@@ -10,33 +10,33 @@ export let values = {
 };
 
 export function getTweakPaneReady(username) {
-   const pane = new Tweakpane.Pane({
+   const pane = new Pane({
       container: document.getElementsByClassName('tweakpane-container')[0],
       title: `Hello 💖 ${username} 💖`,
    });
-   pane.addInput(values, 'Transparency');
-   pane.addInput(values, 'red', {
+   pane.addBinding(values, 'Transparency');
+   pane.addBinding(values, 'red', {
       min: 0,
       max: 9,
       value: 0,
       step: 1,
       label: 'Red',
    });
-   pane.addInput(values, 'green', {
+   pane.addBinding(values, 'green', {
       min: 0,
       max: 9,
       value: 0,
       step: 1,
       label: 'Green',
    });
-   pane.addInput(values, 'blue', {
+   pane.addBinding(values, 'blue', {
       min: 0,
       max: 9,
       value: 0,
       step: 1,
       label: 'Blue',
    });
-   pane.addInput(values, 'alpha', {
+   pane.addBinding(values, 'alpha', {
       min: 0,
       max: 9,
       value: 9,
