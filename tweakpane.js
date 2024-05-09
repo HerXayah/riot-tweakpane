@@ -1,4 +1,4 @@
-import {Pane} from 'https://cdn.jsdelivr.net/npm/tweakpane@4.0.0-beta.1/dist/tweakpane.min.js';
+import { Pane } from 'https://cdn.jsdelivr.net/npm/tweakpane@4.0.3/dist/tweakpane.min.js';
 import * as utils from './utils.js';
 
 export let values = {
