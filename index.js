@@ -5,7 +5,19 @@ import * as Tweakpane from './tweakpane.js';
 window.addEventListener('load', async () => {
    console.log('Hello, world!');
 
-   window.Effect.apply('unified', { color: '#0009' });
+   // embed twitch player
+
+   const script = document.createElement('script');
+   script.setAttribute('src', 'https://embed.twitch.tv/embed/v1.js');
+   document.body.appendChild(script);
+
+   if (DataStore.get('rgba-val') == null) {
+      DataStore.set('rgba-val', '#0009');
+   }
+
+   window.Effect.apply('unified', {
+      color: `${DataStore.get('rgba-val')}`,
+   });
 
    const div = document.createElement('div');
    let element = document.createElement('div');
@@ -16,22 +28,12 @@ window.addEventListener('load', async () => {
    element.style.left = '20px';
    div.appendChild(element);
    document.body.appendChild(div);
-   utils.makeDraggable(element);
+   // utils.makeDraggable(element);
+   element.ariaReadOnly = false;
+   element.disable = false;
 
    while (!(await utils.getUsername())) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
    }
    Tweakpane.getTweakPaneReady(await utils.getUsername());
 });
-
-// needs fixing. I want it to be able to
-// move it back to inside the screen when
-// it is dragged out of bounds
-
-// also a bug is when you drag it out ill not react. just p[ress a boolean
-// and it will react again
-let element = document.getElementsByClassName('tweakpane-container')[0];
-
-element.ondragend = function (e) {
-   utils.checkOutOfBounds('tweakpane-container');
-};

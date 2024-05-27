@@ -1,7 +1,7 @@
-export async function transparency(boolean, blue, green, red, alpha) {
+export async function transparency(boolean, rgba) {
    if (boolean) {
       window.Effect.apply('unified', {
-         color: '#' + red + green + blue + alpha,
+         color: rgba,
       });
    } else {
       window.Effect.clear();
@@ -11,8 +11,8 @@ export async function transparency(boolean, blue, green, red, alpha) {
 export async function makeDraggable(element) {
    element.addEventListener('mousedown', (e) => {
       e.preventDefault();
-      // drag only with right mouse/middle mouse button
-      if (e.button === 0) {
+      // drag only with middle mouse button
+      if (e.button !== 1) {
          return;
       }
       const { clientX, clientY } = e;
