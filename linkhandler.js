@@ -21,8 +21,6 @@ export async function processLink(link) {
 }
 
 export async function replaceLinks(link) {
-   console.log(link);
-
    const element = document.querySelector(
       '#rcp-fe-viewport-root > section.rcp-fe-viewport-overlay > div:nth-child(3) > lol-uikit-full-page-modal > span > div > iframe'
    );
@@ -33,9 +31,8 @@ export async function replaceLinks(link) {
 
    if (link.includes('cdpn.io')) {
       element.src = link;
+      element.setAttribute('autoplay', '1');
    } else {
       throw new Error('Invalid YouTube link');
    }
-
-   element.src = link;
 }
